@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="nomios_system">
+  <compiler angle="radian" balanceinertia="true" discardvisual="false" meshdir="../meshes/" coordinate="local" autolimits="true" />
+  <asset>
+    <mesh name="head_1" file="head_1.STL" />
+    <mesh name="arduino_uno_q_housing_1" file="arduino_uno_q_housing_1.STL" />
+    <mesh name="Arduino_UNO_Q_1" file="Arduino_UNO_Q_1.STL" />
+    <mesh name="media_carrier_1" file="media_carrier_1.STL" />
+    <mesh name="battery_1" file="battery_1.STL" />
+    <mesh name="battery_2" file="battery_2.STL" />
+    <mesh name="pi_camera_v2_stereo_bracket_80mm_1" file="pi_camera_v2_stereo_bracket_80mm_1.STL" />
+    <mesh name="pi_camera_v2_8mp_3" file="pi_camera_v2_8mp_3.STL" />
+    <mesh name="pi_camera_v2_8mp_4" file="pi_camera_v2_8mp_4.STL" />
+    <mesh name="pi_camera_v2_8mp_5" file="pi_camera_v2_8mp_5.STL" />
+    <mesh name="left_hip_yaw_servo" file="left_hip_yaw_servo.STL" />
+    <mesh name="left_hip_yaw_clamshell_base" file="left_hip_yaw_clamshell_base.STL" />
+    <mesh name="left_hip_yaw_clamshell_cap" file="left_hip_yaw_clamshell_cap.STL" />
+    <mesh name="right_hip_yaw_servo" file="right_hip_yaw_servo.STL" />
+    <mesh name="right_hip_yaw_clamshell_base" file="right_hip_yaw_clamshell_base.STL" />
+    <mesh name="right_hip_yaw_clamshell_cap" file="right_hip_yaw_clamshell_cap.STL" />
+    <mesh name="left_hip_yaw_u_bracket" file="left_hip_yaw_u_bracket.STL" />
+    <mesh name="left_hip_servo" file="left_hip_servo.STL" />
+    <mesh name="left_hip_clamshell_base" file="left_hip_clamshell_base.STL" />
+    <mesh name="left_hip_clamshell_cap" file="left_hip_clamshell_cap.STL" />
+    <mesh name="left_hip_u_bracket" file="left_hip_u_bracket.STL" />
+    <mesh name="left_thigh_u_bracket" file="left_thigh_u_bracket.STL" />
+    <mesh name="left_thigh_servo" file="left_thigh_servo.STL" />
+    <mesh name="left_thigh_clamshell_base" file="left_thigh_clamshell_base.STL" />
+    <mesh name="left_thigh_clamshell_cap" file="left_thigh_clamshell_cap.STL" />
+    <mesh name="left_upper_shin" file="left_upper_shin.STL" />
+    <mesh name="left_knee_u_bracket" file="left_knee_u_bracket.STL" />
+    <mesh name="left_knee_servo" file="left_knee_servo.STL" />
+    <mesh name="left_knee_clamshell_base" file="left_knee_clamshell_base.STL" />
+    <mesh name="left_knee_clamshell_cap" file="left_knee_clamshell_cap.STL" />
+    <mesh name="left_lower_shin" file="left_lower_shin.STL" />
+    <mesh name="left_ankle_u_bracket" file="left_ankle_u_bracket.STL" />
+    <mesh name="left_ankle_servo" file="left_ankle_servo.STL" />
+    <mesh name="left_ankle_clamshell_base" file="left_ankle_clamshell_base.STL" />
+    <mesh name="left_ankle_clamshell_cap" file="left_ankle_clamshell_cap.STL" />
+    <mesh name="left_foot" file="left_foot.STL" />
+    <mesh name="right_hip_yaw_u_bracket" file="right_hip_yaw_u_bracket.STL" />
+    <mesh name="right_hip_servo" file="right_hip_servo.STL" />
+    <mesh name="right_hip_clamshell_base" file="right_hip_clamshell_base.STL" />
+    <mesh name="right_hip_clamshell_cap" file="right_hip_clamshell_cap.STL" />
+    <mesh name="right_hip_u_bracket" file="right_hip_u_bracket.STL" />
+    <mesh name="right_thigh_u_bracket" file="right_thigh_u_bracket.STL" />
+    <mesh name="right_thigh_servo" file="right_thigh_servo.STL" />
+    <mesh name="right_thigh_clamshell_base" file="right_thigh_clamshell_base.STL" />
+    <mesh name="right_thigh_clamshell_cap" file="right_thigh_clamshell_cap.STL" />
+    <mesh name="right_upper_shin" file="right_upper_shin.STL" />
+    <mesh name="right_knee_u_bracket" file="right_knee_u_bracket.STL" />
+    <mesh name="right_knee_servo" file="right_knee_servo.STL" />
+    <mesh name="right_knee_clamshell_base" file="right_knee_clamshell_base.STL" />
+    <mesh name="right_knee_clamshell_cap" file="right_knee_clamshell_cap.STL" />
+    <mesh name="right_lower_shin" file="right_lower_shin.STL" />
+    <mesh name="right_ankle_u_bracket" file="right_ankle_u_bracket.STL" />
+    <mesh name="right_ankle_servo" file="right_ankle_servo.STL" />
+    <mesh name="right_ankle_clamshell_base" file="right_ankle_clamshell_base.STL" />
+    <mesh name="right_ankle_clamshell_cap" file="right_ankle_clamshell_cap.STL" />
+    <mesh name="right_foot" file="right_foot.STL" />
+  </asset>
+  <worldbody>
+    <body name="torso_base" pos="0 0 0.507061">
+      <freejoint name="root" />
+      <body name="base_link" pos="0 0 0">
+        <inertial pos="0.016345 -0.001163 -0.035003" mass="0.4800" diaginertia="0.003840 0.002572 0.001931" />
+        <site name="imu_site" pos="0.024481 -0.003828 0.004667" size="0.012" group="3" rgba="0.9 0.2 0.2 1" />
+        <camera name="left_stereo_cam" pos="0.046881 0.040000 0.002469" xyaxes="-0.000000 -1.000000 0.000000 -0.000000 0.000000 1.000000" fovy="48.8" />
+        <site name="left_stereo_camera_site" pos="0.046881 0.040000 0.002469" size="0.005" group="3" rgba="0.1 0.8 0.9 0.8" />
+        <camera name="right_stereo_cam" pos="0.046881 -0.040000 0.002469" xyaxes="-0.000000 -1.000000 0.000000 -0.000000 0.000000 1.000000" fovy="48.8" />
+        <site name="right_stereo_camera_site" pos="0.046881 -0.040000 0.002469" size="0.005" group="3" rgba="0.1 0.8 0.9 0.8" />
+        <camera name="top_head_cam" pos="0.036075 0.000440 0.105871" xyaxes="0.000000 -1.000000 0.000000 -0.148340 -0.000000 0.988936" fovy="48.8" />
+        <site name="top_camera_site" pos="0.036075 0.000440 0.105871" size="0.005" group="3" rgba="0.1 0.8 0.9 0.8" />
+        <geom name="col_torso_head" type="box" pos="0.005500 0.000000 0.019422" size="0.045500 0.100000 0.109422" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+        <geom name="col_torso_left_hip_yaw" type="box" pos="0.007133 0.056456 -0.077950" size="0.023802 0.033254 0.029183" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+        <geom name="col_torso_right_hip_yaw" type="box" pos="0.007133 -0.056194 -0.078632" size="0.023802 0.033254 0.029183" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+        <geom name="geom_head_1" type="mesh" mesh="head_1" rgba="0.9 0.9 0.9 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_arduino_uno_q_housing_1" type="mesh" mesh="arduino_uno_q_housing_1" rgba="0.85 0.85 0.88 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_Arduino_UNO_Q_1" type="mesh" mesh="Arduino_UNO_Q_1" rgba="0.12 0.45 0.35 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_media_carrier_1" type="mesh" mesh="media_carrier_1" rgba="0.85 0.85 0.88 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_battery_1" type="mesh" mesh="battery_1" rgba="0.12 0.12 0.14 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_battery_2" type="mesh" mesh="battery_2" rgba="0.12 0.12 0.14 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_pi_camera_v2_stereo_bracket_80mm_1" type="mesh" mesh="pi_camera_v2_stereo_bracket_80mm_1" rgba="0.2 0.22 0.25 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_pi_camera_v2_8mp_3" type="mesh" mesh="pi_camera_v2_8mp_3" rgba="0.1 0.48 0.32 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_pi_camera_v2_8mp_4" type="mesh" mesh="pi_camera_v2_8mp_4" rgba="0.1 0.48 0.32 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_pi_camera_v2_8mp_5" type="mesh" mesh="pi_camera_v2_8mp_5" rgba="0.1 0.48 0.32 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_left_hip_yaw_servo" type="mesh" mesh="left_hip_yaw_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_left_hip_yaw_clamshell_base" type="mesh" mesh="left_hip_yaw_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_left_hip_yaw_clamshell_cap" type="mesh" mesh="left_hip_yaw_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_right_hip_yaw_servo" type="mesh" mesh="right_hip_yaw_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_right_hip_yaw_clamshell_base" type="mesh" mesh="right_hip_yaw_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+        <geom name="geom_right_hip_yaw_clamshell_cap" type="mesh" mesh="right_hip_yaw_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+        <body name="left_hip_yaw_link" pos="0.010474 0.069181 -0.081368">
+          <joint name="joint_left_hip_yaw" type="hinge" pos="0 0 0" axis="0.044866 0.353481 0.934365" range="-0.7854 0.7854" damping="0.15" armature="0.005" />
+          <inertial pos="0.004255 0.035226 -0.012305" mass="0.0840" diaginertia="0.000099 0.000050 0.000082" />
+          <geom name="col_left_hip_yaw_link" type="box" pos="0.004353 0.026576 -0.002577" size="0.024450 0.048268 0.034534" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+          <geom name="geom_left_hip_yaw_u_bracket" type="mesh" mesh="left_hip_yaw_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+          <geom name="geom_left_hip_servo" type="mesh" mesh="left_hip_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+          <geom name="geom_left_hip_clamshell_base" type="mesh" mesh="left_hip_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+          <geom name="geom_left_hip_clamshell_cap" type="mesh" mesh="left_hip_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+          <body name="left_hip_roll_link" pos="0.007065 0.056931 -0.020512">
+            <joint name="joint_left_hip_roll" type="hinge" pos="0 0 0" axis="0.992990 -0.118157 -0.002981" range="-0.7854 0.7854" damping="0.15" armature="0.005" />
+            <inertial pos="-0.000034 0.000269 -0.021988" mass="0.0754" diaginertia="0.000054 0.000053 0.000048" />
+            <geom name="col_left_hip_roll_link" type="box" pos="-0.000017 0.000405 -0.022121" size="0.030853 0.030970 0.034208" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+            <geom name="geom_left_hip_u_bracket" type="mesh" mesh="left_hip_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+            <geom name="geom_left_thigh_u_bracket" type="mesh" mesh="left_thigh_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+            <body name="left_thigh_link" pos="-0.000068 0.000537 -0.043977">
+              <joint name="joint_left_hip_pitch" type="hinge" pos="0 0 0" axis="0.118185 0.992920 0.011937" range="-1.5708 1.5708" damping="0.15" armature="0.005" />
+              <inertial pos="-0.000013 0.000103 -0.040234" mass="0.0960" diaginertia="0.000329 0.000318 0.000050" />
+              <geom name="col_left_thigh_link" type="box" pos="-0.000018 0.000745 -0.082656" size="0.024855 0.030970 0.096609" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+              <geom name="geom_left_thigh_servo" type="mesh" mesh="left_thigh_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_left_thigh_clamshell_base" type="mesh" mesh="left_thigh_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_left_thigh_clamshell_cap" type="mesh" mesh="left_thigh_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_left_upper_shin" type="mesh" mesh="left_upper_shin" rgba="0.9 0.9 0.92 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_left_knee_u_bracket" type="mesh" mesh="left_knee_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+              <body name="left_shin_link" pos="-0.000236 0.000876 -0.166912">
+                <joint name="joint_left_knee_pitch" type="hinge" pos="0 0 0" axis="0.118185 0.992920 0.011937" range="-2.0944 2.0944" damping="0.15" armature="0.005" />
+                <inertial pos="-0.000155 0.000006 -0.030730" mass="0.0861" diaginertia="0.000155 0.000145 0.000045" />
+                <geom name="col_left_shin_link" type="box" pos="-0.000336 0.000050 -0.052657" size="0.024855 0.030970 0.066611" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+                <geom name="geom_left_knee_servo" type="mesh" mesh="left_knee_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_left_knee_clamshell_base" type="mesh" mesh="left_knee_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_left_knee_clamshell_cap" type="mesh" mesh="left_knee_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_left_lower_shin" type="mesh" mesh="left_lower_shin" rgba="0.9 0.9 0.92 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_left_ankle_u_bracket" type="mesh" mesh="left_ankle_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                <body name="left_foot_link" pos="-0.000460 0.000182 -0.106915">
+                  <joint name="joint_left_ankle_pitch" type="hinge" pos="0 0 0" axis="0.118185 0.992920 0.011937" range="-1.2217 1.2217" damping="0.15" armature="0.005" />
+                  <inertial pos="-0.000099 -0.000028 -0.016506" mass="0.1224" diaginertia="0.000157 0.000144 0.000111" />
+                  <geom name="col_left_ankle" type="box" pos="-0.000336 -0.000798 -0.012639" size="0.024855 0.023763 0.026593" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+                  <geom name="geom_left_ankle_servo" type="mesh" mesh="left_ankle_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+                  <geom name="geom_left_ankle_clamshell_base" type="mesh" mesh="left_ankle_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                  <geom name="geom_left_ankle_clamshell_cap" type="mesh" mesh="left_ankle_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                  <geom name="geom_left_foot" type="mesh" mesh="left_foot" rgba="0.9 0.9 0.92 1.0" contype="0" conaffinity="0" />
+                  <geom name="col_left_foot" type="box" pos="-0.000422 -0.000123 -0.078445" size="0.034630 0.039123 0.004000" rgba="0.3 0.3 0.35 0.5" group="3" contype="1" conaffinity="1" friction="1.1 0.005 0.0001" />
+                  <site name="left_foot_site" type="box" pos="-0.000422 -0.000123 -0.078445" size="0.036630 0.041123 0.006000" group="3" rgba="0.2 0.8 0.2 0.4" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="right_hip_yaw_link" pos="0.010156 -0.068959 -0.082050">
+          <joint name="joint_right_hip_yaw" type="hinge" pos="0 0 0" axis="0.044866 -0.353481 0.934365" range="-0.7854 0.7854" damping="0.15" armature="0.005" />
+          <inertial pos="0.004464 -0.034377 -0.014445" mass="0.0840" diaginertia="0.000100 0.000053 0.000081" />
+          <geom name="col_right_hip_yaw_link" type="box" pos="0.004623 -0.026115 -0.003888" size="0.024646 0.047810 0.035845" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+          <geom name="geom_right_hip_yaw_u_bracket" type="mesh" mesh="right_hip_yaw_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+          <geom name="geom_right_hip_servo" type="mesh" mesh="right_hip_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+          <geom name="geom_right_hip_clamshell_base" type="mesh" mesh="right_hip_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+          <geom name="geom_right_hip_clamshell_cap" type="mesh" mesh="right_hip_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+          <body name="right_hip_roll_link" pos="0.007456 -0.055964 -0.022895">
+            <joint name="joint_right_hip_roll" type="hinge" pos="0 0 0" axis="-0.992041 -0.125916 -0.000000" range="-0.7854 0.7854" damping="0.15" armature="0.005" />
+            <inertial pos="-0.000034 0.000269 -0.021988" mass="0.0754" diaginertia="0.000054 0.000053 0.000048" />
+            <geom name="col_right_hip_roll_link" type="box" pos="-0.000017 0.000405 -0.022171" size="0.030917 0.031034 0.034170" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+            <geom name="geom_right_hip_u_bracket" type="mesh" mesh="right_hip_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+            <geom name="geom_right_thigh_u_bracket" type="mesh" mesh="right_thigh_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+            <body name="right_thigh_link" pos="-0.000068 0.000537 -0.043977">
+              <joint name="joint_right_hip_pitch" type="hinge" pos="0 0 0" axis="-0.125906 0.991966 0.012304" range="-1.5708 1.5708" damping="0.15" armature="0.005" />
+              <inertial pos="-0.000205 0.000855 -0.040224" mass="0.0960" diaginertia="0.000329 0.000319 0.000051" />
+              <geom name="col_right_thigh_link" type="box" pos="-0.000345 0.003026 -0.082636" size="0.024997 0.031034 0.096610" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+              <geom name="geom_right_thigh_servo" type="mesh" mesh="right_thigh_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_right_thigh_clamshell_base" type="mesh" mesh="right_thigh_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_right_thigh_clamshell_cap" type="mesh" mesh="right_thigh_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_right_upper_shin" type="mesh" mesh="right_upper_shin" rgba="0.9 0.9 0.92 1.0" contype="0" conaffinity="0" />
+              <geom name="geom_right_knee_u_bracket" type="mesh" mesh="right_knee_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+              <body name="right_shin_link" pos="-0.000562 0.003158 -0.166883">
+                <joint name="joint_right_knee_pitch" type="hinge" pos="0 0 0" axis="-0.125906 0.991966 0.012304" range="-2.0944 2.0944" damping="0.15" armature="0.005" />
+                <inertial pos="-0.000134 0.000747 -0.030721" mass="0.0861" diaginertia="0.000155 0.000145 0.000045" />
+                <geom name="col_right_shin_link" type="box" pos="-0.000186 0.002293 -0.052639" size="0.024838 0.031034 0.066613" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+                <geom name="geom_right_knee_servo" type="mesh" mesh="right_knee_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_right_knee_clamshell_base" type="mesh" mesh="right_knee_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_right_knee_clamshell_cap" type="mesh" mesh="right_knee_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_right_lower_shin" type="mesh" mesh="right_lower_shin" rgba="0.9 0.9 0.92 1.0" contype="0" conaffinity="0" />
+                <geom name="geom_right_ankle_u_bracket" type="mesh" mesh="right_ankle_u_bracket" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                <body name="right_foot_link" pos="-0.000469 0.002426 -0.106888">
+                  <joint name="joint_right_ankle_pitch" type="hinge" pos="0 0 0" axis="-0.125906 0.991966 0.012304" range="-1.2217 1.2217" damping="0.15" armature="0.005" />
+                  <inertial pos="0.000087 -0.000023 -0.016506" mass="0.1224" diaginertia="0.000158 0.000144 0.000113" />
+                  <geom name="col_right_ankle" type="box" pos="0.000262 -0.000796 -0.012623" size="0.024997 0.023918 0.026569" rgba="0.3 0.3 0.35 0.4" group="3" contype="1" conaffinity="1" friction="0.8 0.005 0.0001" />
+                  <geom name="geom_right_ankle_servo" type="mesh" mesh="right_ankle_servo" rgba="0.18 0.18 0.2 1.0" contype="0" conaffinity="0" />
+                  <geom name="geom_right_ankle_clamshell_base" type="mesh" mesh="right_ankle_clamshell_base" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                  <geom name="geom_right_ankle_clamshell_cap" type="mesh" mesh="right_ankle_clamshell_cap" rgba="0.92 0.92 0.94 1.0" contype="0" conaffinity="0" />
+                  <geom name="geom_right_foot" type="mesh" mesh="right_foot" rgba="0.9 0.9 0.92 1.0" contype="0" conaffinity="0" />
+                  <geom name="col_right_foot" type="box" pos="0.000177 -0.000121 -0.078368" size="0.034877 0.039327 0.004000" rgba="0.3 0.3 0.35 0.5" group="3" contype="1" conaffinity="1" friction="1.1 0.005 0.0001" />
+                  <site name="right_foot_site" type="box" pos="0.000177 -0.000121 -0.078368" size="0.036877 0.041327 0.006000" group="3" rgba="0.2 0.4 0.9 0.4" />
+                  <site name="ee_site" type="box" pos="0.000177 -0.000121 -0.078368" size="0.036877 0.041327 0.006000" group="3" rgba="0.9 0.6 0.1 0.4" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="base_link" body2="left_hip_yaw_link" />
+    <exclude body1="base_link" body2="left_hip_roll_link" />
+    <exclude body1="left_hip_yaw_link" body2="left_hip_roll_link" />
+    <exclude body1="left_hip_yaw_link" body2="left_thigh_link" />
+    <exclude body1="left_hip_roll_link" body2="left_thigh_link" />
+    <exclude body1="left_thigh_link" body2="left_shin_link" />
+    <exclude body1="left_shin_link" body2="left_foot_link" />
+    <exclude body1="base_link" body2="right_hip_yaw_link" />
+    <exclude body1="base_link" body2="right_hip_roll_link" />
+    <exclude body1="right_hip_yaw_link" body2="right_hip_roll_link" />
+    <exclude body1="right_hip_yaw_link" body2="right_thigh_link" />
+    <exclude body1="right_hip_roll_link" body2="right_thigh_link" />
+    <exclude body1="right_thigh_link" body2="right_shin_link" />
+    <exclude body1="right_shin_link" body2="right_foot_link" />
+  </contact>
+  <actuator>
+    <position name="actuator_left_hip_yaw" joint="joint_left_hip_yaw" kp="45" kv="2.5" ctrlrange="-0.79 0.79" forcerange="-3.0 3.0" />
+    <position name="actuator_left_hip_roll" joint="joint_left_hip_roll" kp="45" kv="2.5" ctrlrange="-0.79 0.79" forcerange="-3.0 3.0" />
+    <position name="actuator_left_hip_pitch" joint="joint_left_hip_pitch" kp="45" kv="2.5" ctrlrange="-1.57 1.57" forcerange="-3.0 3.0" />
+    <position name="actuator_left_knee_pitch" joint="joint_left_knee_pitch" kp="45" kv="2.5" ctrlrange="-1.57 1.57" forcerange="-3.0 3.0" />
+    <position name="actuator_left_ankle_pitch" joint="joint_left_ankle_pitch" kp="45" kv="2.5" ctrlrange="-1.22 1.22" forcerange="-3.0 3.0" />
+    <position name="actuator_right_hip_yaw" joint="joint_right_hip_yaw" kp="45" kv="2.5" ctrlrange="-0.79 0.79" forcerange="-3.0 3.0" />
+    <position name="actuator_right_hip_roll" joint="joint_right_hip_roll" kp="45" kv="2.5" ctrlrange="-0.79 0.79" forcerange="-3.0 3.0" />
+    <position name="actuator_right_hip_pitch" joint="joint_right_hip_pitch" kp="45" kv="2.5" ctrlrange="-1.57 1.57" forcerange="-3.0 3.0" />
+    <position name="actuator_right_knee_pitch" joint="joint_right_knee_pitch" kp="45" kv="2.5" ctrlrange="-1.57 1.57" forcerange="-3.0 3.0" />
+    <position name="actuator_right_ankle_pitch" joint="joint_right_ankle_pitch" kp="45" kv="2.5" ctrlrange="-1.22 1.22" forcerange="-3.0 3.0" />
+  </actuator>
+  <sensor>
+    <jointpos name="sensor_pos_left_hip_yaw" joint="joint_left_hip_yaw" />
+    <jointvel name="sensor_vel_left_hip_yaw" joint="joint_left_hip_yaw" />
+    <jointactuatorfrc name="sensor_frc_left_hip_yaw" joint="joint_left_hip_yaw" />
+    <jointpos name="sensor_pos_left_hip_roll" joint="joint_left_hip_roll" />
+    <jointvel name="sensor_vel_left_hip_roll" joint="joint_left_hip_roll" />
+    <jointactuatorfrc name="sensor_frc_left_hip_roll" joint="joint_left_hip_roll" />
+    <jointpos name="sensor_pos_left_hip_pitch" joint="joint_left_hip_pitch" />
+    <jointvel name="sensor_vel_left_hip_pitch" joint="joint_left_hip_pitch" />
+    <jointactuatorfrc name="sensor_frc_left_hip_pitch" joint="joint_left_hip_pitch" />
+    <jointpos name="sensor_pos_left_knee_pitch" joint="joint_left_knee_pitch" />
+    <jointvel name="sensor_vel_left_knee_pitch" joint="joint_left_knee_pitch" />
+    <jointactuatorfrc name="sensor_frc_left_knee_pitch" joint="joint_left_knee_pitch" />
+    <jointpos name="sensor_pos_left_ankle_pitch" joint="joint_left_ankle_pitch" />
+    <jointvel name="sensor_vel_left_ankle_pitch" joint="joint_left_ankle_pitch" />
+    <jointactuatorfrc name="sensor_frc_left_ankle_pitch" joint="joint_left_ankle_pitch" />
+    <jointpos name="sensor_pos_right_hip_yaw" joint="joint_right_hip_yaw" />
+    <jointvel name="sensor_vel_right_hip_yaw" joint="joint_right_hip_yaw" />
+    <jointactuatorfrc name="sensor_frc_right_hip_yaw" joint="joint_right_hip_yaw" />
+    <jointpos name="sensor_pos_right_hip_roll" joint="joint_right_hip_roll" />
+    <jointvel name="sensor_vel_right_hip_roll" joint="joint_right_hip_roll" />
+    <jointactuatorfrc name="sensor_frc_right_hip_roll" joint="joint_right_hip_roll" />
+    <jointpos name="sensor_pos_right_hip_pitch" joint="joint_right_hip_pitch" />
+    <jointvel name="sensor_vel_right_hip_pitch" joint="joint_right_hip_pitch" />
+    <jointactuatorfrc name="sensor_frc_right_hip_pitch" joint="joint_right_hip_pitch" />
+    <jointpos name="sensor_pos_right_knee_pitch" joint="joint_right_knee_pitch" />
+    <jointvel name="sensor_vel_right_knee_pitch" joint="joint_right_knee_pitch" />
+    <jointactuatorfrc name="sensor_frc_right_knee_pitch" joint="joint_right_knee_pitch" />
+    <jointpos name="sensor_pos_right_ankle_pitch" joint="joint_right_ankle_pitch" />
+    <jointvel name="sensor_vel_right_ankle_pitch" joint="joint_right_ankle_pitch" />
+    <jointactuatorfrc name="sensor_frc_right_ankle_pitch" joint="joint_right_ankle_pitch" />
+    <accelerometer name="sensor_imu_accel" site="imu_site" />
+    <gyro name="sensor_imu_gyro" site="imu_site" />
+    <framequat name="sensor_imu_quat" objtype="site" objname="imu_site" />
+    <magnetometer name="sensor_imu_mag" site="imu_site" />
+    <velocimeter name="sensor_imu_vel" site="imu_site" />
+    <framepos name="sensor_imu_pos" objtype="site" objname="imu_site" />
+    <framelinvel name="sensor_imu_linvel" objtype="site" objname="imu_site" />
+    <frameangacc name="sensor_imu_angacc" objtype="site" objname="imu_site" />
+    <framepos name="sensor_left_cam_pos" objtype="site" objname="left_stereo_camera_site" />
+    <framepos name="sensor_right_cam_pos" objtype="site" objname="right_stereo_camera_site" />
+    <framepos name="sensor_top_cam_pos" objtype="site" objname="top_camera_site" />
+    <touch name="sensor_left_foot_touch" site="left_foot_site" />
+    <touch name="sensor_right_foot_touch" site="right_foot_site" />
+    <force name="sensor_left_foot_force" site="left_foot_site" />
+    <force name="sensor_right_foot_force" site="right_foot_site" />
+    <torque name="sensor_left_foot_torque" site="left_foot_site" />
+    <torque name="sensor_right_foot_torque" site="right_foot_site" />
+    <framepos name="sensor_left_foot_pos" objtype="site" objname="left_foot_site" />
+    <framelinvel name="sensor_left_foot_linvel" objtype="site" objname="left_foot_site" />
+    <accelerometer name="sensor_left_foot_accel" site="left_foot_site" />
+    <gyro name="sensor_left_foot_gyro" site="left_foot_site" />
+    <framepos name="sensor_ee_pos" objtype="site" objname="ee_site" />
+    <framelinvel name="sensor_ee_linvel" objtype="site" objname="ee_site" />
+    <accelerometer name="sensor_ee_accel" site="ee_site" />
+    <gyro name="sensor_ee_gyro" site="ee_site" />
+    <touch name="sensor_ee_touch" site="ee_site" />
+    <subtreecom name="sensor_robot_com" body="torso_base" />
+    <subtreelinvel name="sensor_robot_linvel" body="torso_base" />
+    <subtreeangmom name="sensor_robot_angmom" body="torso_base" />
+  </sensor>
+</mujoco>

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nomios"
+version = "0.1.0"
+description = "Low-cost 10-DoF autonomous bipedal robot — SolidWorks CAD, URDF/MuJoCo digital twin, and hardware design"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Teddy Prendergast" }
+]
+dependencies = [
+    "mujoco>=3.1.0",
+    "numpy>=1.24.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["scripts*"]

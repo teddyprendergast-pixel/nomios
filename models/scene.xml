@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="nomios_scene">
+  <compiler angle="radian" balanceinertia="true" discardvisual="false" meshdir="../meshes/" coordinate="local" autolimits="true" />
+  <statistic center="0 0 0.30" extent="0.9" />
+  <option timestep="0.002" gravity="0 0 -9.81" integrator="implicitfast">
+    <flag contact="enable" energy="enable" />
+  </option>
+  <visual>
+    <headlight ambient="0.40 0.40 0.40" diffuse="0.80 0.80 0.80" specular="0.20 0.20 0.20" />
+    <rgba haze="0.15 0.25 0.35 1.0" />
+    <global offwidth="1920" offheight="1080" />
+    <quality shadowsize="4096" />
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.30 0.50 0.70" rgb2="0.05 0.05 0.08" width="512" height="512" />
+    <texture name="grid_floor_tex" type="2d" builtin="checker" rgb1="0.22 0.25 0.28" rgb2="0.16 0.18 0.21" width="512" height="512" mark="edge" markrgb="0.75 0.75 0.75" />
+    <material name="grid_floor_mat" texture="grid_floor_tex" texrepeat="10 10" reflectance="0.08" roughness="0.80" specular="0.12" />
+  </asset>
+  <worldbody>
+    <light name="main_light" pos="0.6 -1.2 2.8" dir="-0.25 0.40 -1.0" diffuse="0.88 0.88 0.88" specular="0.25 0.25 0.25" directional="true" castshadow="true" />
+    <light name="fill_light" pos="-1.5 1.5 2.0" dir="0.50 -0.50 -1.0" diffuse="0.35 0.35 0.35" specular="0.05 0.05 0.05" directional="true" />
+    <geom name="floor" type="plane" size="6.0 6.0 0.05" material="grid_floor_mat" friction="1.1 0.005 0.0001" />
+    <camera name="isometric_cam" pos="0.85 -0.85 0.65" xyaxes="0.707 0.707 0 -0.35 0.35 0.87" />
+    <camera name="side_cam" pos="0 -1.1 0.35" xyaxes="1 0 0 0 0.25 0.97" />
+    <camera name="front_cam" pos="1.1 0 0.35" xyaxes="0 1 0 -0.25 0 0.97" />
+    <camera name="top_cam" pos="0 0 1.6" xyaxes="1 0 0 0 1 0" />
+  </worldbody>
+  <include file="system.xml" />
+</mujoco>

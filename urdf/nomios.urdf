@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="nomios">
+  <mujoco>
+    <compiler angle="radian" balanceinertia="true" discardvisual="false" fusestatic="false" meshdir="../meshes/" />
+  </mujoco>
+  <link name="torso_base">
+    <inertial>
+      <origin xyz="0.016345 -0.001163 -0.035003" rpy="0 0 0" />
+      <mass value="0.480000" />
+      <inertia ixx="3.840311e-03" ixy="0" ixz="0" iyy="2.571550e-03" iyz="0" izz="1.931240e-03" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/head_1.STL" />
+      </geometry>
+      <material name="mat_head_1">
+        <color rgba="0.9 0.9 0.9 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/arduino_uno_q_housing_1.STL" />
+      </geometry>
+      <material name="mat_arduino_uno_q_housing_1">
+        <color rgba="0.85 0.85 0.88 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/Arduino_UNO_Q_1.STL" />
+      </geometry>
+      <material name="mat_Arduino_UNO_Q_1">
+        <color rgba="0.12 0.45 0.35 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/media_carrier_1.STL" />
+      </geometry>
+      <material name="mat_media_carrier_1">
+        <color rgba="0.85 0.85 0.88 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/battery_1.STL" />
+      </geometry>
+      <material name="mat_battery_1">
+        <color rgba="0.12 0.12 0.14 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/battery_2.STL" />
+      </geometry>
+      <material name="mat_battery_2">
+        <color rgba="0.12 0.12 0.14 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/pi_camera_v2_stereo_bracket_80mm_1.STL" />
+      </geometry>
+      <material name="mat_pi_camera_v2_stereo_bracket_80mm_1">
+        <color rgba="0.2 0.22 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/pi_camera_v2_8mp_3.STL" />
+      </geometry>
+      <material name="mat_pi_camera_v2_8mp_3">
+        <color rgba="0.1 0.48 0.32 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/pi_camera_v2_8mp_4.STL" />
+      </geometry>
+      <material name="mat_pi_camera_v2_8mp_4">
+        <color rgba="0.1 0.48 0.32 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/pi_camera_v2_8mp_5.STL" />
+      </geometry>
+      <material name="mat_pi_camera_v2_8mp_5">
+        <color rgba="0.1 0.48 0.32 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_yaw_servo.STL" />
+      </geometry>
+      <material name="mat_left_hip_yaw_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_yaw_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_left_hip_yaw_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_yaw_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_left_hip_yaw_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_yaw_servo.STL" />
+      </geometry>
+      <material name="mat_right_hip_yaw_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_yaw_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_right_hip_yaw_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_yaw_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_right_hip_yaw_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.005500 0.000000 0.019422" rpy="0 0 0" />
+      <geometry>
+        <box size="0.091000 0.200000 0.218845" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.007133 0.056456 -0.077950" rpy="0 0 0" />
+      <geometry>
+        <box size="0.047603 0.066508 0.058366" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.007133 -0.056194 -0.078632" rpy="0 0 0" />
+      <geometry>
+        <box size="0.047603 0.066508 0.058366" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_hip_yaw_link">
+    <inertial>
+      <origin xyz="0.004255 0.035226 -0.012305" rpy="0 0 0" />
+      <mass value="0.084000" />
+      <inertia ixx="9.862629e-05" ixy="0" ixz="0" iyy="5.013087e-05" iyz="0" izz="8.197307e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_yaw_u_bracket.STL" />
+      </geometry>
+      <material name="mat_left_hip_yaw_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_servo.STL" />
+      </geometry>
+      <material name="mat_left_hip_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_left_hip_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_left_hip_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.004353 0.026576 -0.002577" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048901 0.096536 0.069067" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_hip_roll_link">
+    <inertial>
+      <origin xyz="-0.000034 0.000269 -0.021988" rpy="0 0 0" />
+      <mass value="0.075400" />
+      <inertia ixx="5.351790e-05" ixy="0" ixz="0" iyy="5.333537e-05" iyz="0" izz="4.803049e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_hip_u_bracket.STL" />
+      </geometry>
+      <material name="mat_left_hip_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_thigh_u_bracket.STL" />
+      </geometry>
+      <material name="mat_left_thigh_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000017 0.000405 -0.022121" rpy="0 0 0" />
+      <geometry>
+        <box size="0.061705 0.061940 0.068417" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_thigh_link">
+    <inertial>
+      <origin xyz="-0.000013 0.000103 -0.040234" rpy="0 0 0" />
+      <mass value="0.096000" />
+      <inertia ixx="3.293557e-04" ixy="0" ixz="0" iyy="3.184314e-04" iyz="0" izz="5.046095e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_thigh_servo.STL" />
+      </geometry>
+      <material name="mat_left_thigh_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_thigh_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_left_thigh_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_thigh_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_left_thigh_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_upper_shin.STL" />
+      </geometry>
+      <material name="mat_left_upper_shin">
+        <color rgba="0.9 0.9 0.92 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_knee_u_bracket.STL" />
+      </geometry>
+      <material name="mat_left_knee_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000018 0.000745 -0.082656" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049710 0.061940 0.193217" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_shin_link">
+    <inertial>
+      <origin xyz="-0.000155 0.000006 -0.030730" rpy="0 0 0" />
+      <mass value="0.086100" />
+      <inertia ixx="1.548696e-04" ixy="0" ixz="0" iyy="1.450718e-04" iyz="0" izz="4.525716e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_knee_servo.STL" />
+      </geometry>
+      <material name="mat_left_knee_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_knee_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_left_knee_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_knee_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_left_knee_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_lower_shin.STL" />
+      </geometry>
+      <material name="mat_left_lower_shin">
+        <color rgba="0.9 0.9 0.92 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_ankle_u_bracket.STL" />
+      </geometry>
+      <material name="mat_left_ankle_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000336 0.000050 -0.052657" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049710 0.061940 0.133222" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_foot_link">
+    <inertial>
+      <origin xyz="-0.000099 -0.000028 -0.016506" rpy="0 0 0" />
+      <mass value="0.122400" />
+      <inertia ixx="1.572366e-04" ixy="0" ixz="0" iyy="1.437161e-04" iyz="0" izz="1.113801e-04" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_ankle_servo.STL" />
+      </geometry>
+      <material name="mat_left_ankle_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_ankle_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_left_ankle_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_ankle_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_left_ankle_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_foot.STL" />
+      </geometry>
+      <material name="mat_left_foot">
+        <color rgba="0.9 0.9 0.92 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000336 -0.000798 -0.012639" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049710 0.047527 0.053185" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="-0.000422 -0.000123 -0.078445" rpy="0 0 0" />
+      <geometry>
+        <box size="0.069261 0.078247 0.008000" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_hip_yaw_link">
+    <inertial>
+      <origin xyz="0.004464 -0.034377 -0.014445" rpy="0 0 0" />
+      <mass value="0.084000" />
+      <inertia ixx="9.997633e-05" ixy="0" ixz="0" iyy="5.298298e-05" iyz="0" izz="8.100871e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_yaw_u_bracket.STL" />
+      </geometry>
+      <material name="mat_right_hip_yaw_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_servo.STL" />
+      </geometry>
+      <material name="mat_right_hip_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_right_hip_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_right_hip_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.004623 -0.026115 -0.003888" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049292 0.095619 0.071689" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_hip_roll_link">
+    <inertial>
+      <origin xyz="-0.000034 0.000269 -0.021988" rpy="0 0 0" />
+      <mass value="0.075400" />
+      <inertia ixx="5.355150e-05" ixy="0" ixz="0" iyy="5.336900e-05" iyz="0" izz="4.823082e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_hip_u_bracket.STL" />
+      </geometry>
+      <material name="mat_right_hip_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_thigh_u_bracket.STL" />
+      </geometry>
+      <material name="mat_right_thigh_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000017 0.000405 -0.022171" rpy="0 0 0" />
+      <geometry>
+        <box size="0.061834 0.062069 0.068339" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_thigh_link">
+    <inertial>
+      <origin xyz="-0.000205 0.000855 -0.040224" rpy="0 0 0" />
+      <mass value="0.096000" />
+      <inertia ixx="3.294942e-04" ixy="0" ixz="0" iyy="3.186694e-04" iyz="0" izz="5.081552e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_thigh_servo.STL" />
+      </geometry>
+      <material name="mat_right_thigh_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_thigh_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_right_thigh_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_thigh_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_right_thigh_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_upper_shin.STL" />
+      </geometry>
+      <material name="mat_right_upper_shin">
+        <color rgba="0.9 0.9 0.92 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_knee_u_bracket.STL" />
+      </geometry>
+      <material name="mat_right_knee_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000345 0.003026 -0.082636" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049994 0.062069 0.193221" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_shin_link">
+    <inertial>
+      <origin xyz="-0.000134 0.000747 -0.030721" rpy="0 0 0" />
+      <mass value="0.086100" />
+      <inertia ixx="1.549907e-04" ixy="0" ixz="0" iyy="1.450552e-04" iyz="0" izz="4.534815e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_knee_servo.STL" />
+      </geometry>
+      <material name="mat_right_knee_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_knee_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_right_knee_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_knee_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_right_knee_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_lower_shin.STL" />
+      </geometry>
+      <material name="mat_right_lower_shin">
+        <color rgba="0.9 0.9 0.92 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_ankle_u_bracket.STL" />
+      </geometry>
+      <material name="mat_right_ankle_u_bracket">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000186 0.002293 -0.052639" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049677 0.062069 0.133225" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_foot_link">
+    <inertial>
+      <origin xyz="0.000087 -0.000023 -0.016506" rpy="0 0 0" />
+      <mass value="0.122400" />
+      <inertia ixx="1.577198e-04" ixy="0" ixz="0" iyy="1.442487e-04" iyz="0" izz="1.127319e-04" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_ankle_servo.STL" />
+      </geometry>
+      <material name="mat_right_ankle_servo">
+        <color rgba="0.18 0.18 0.2 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_ankle_clamshell_base.STL" />
+      </geometry>
+      <material name="mat_right_ankle_clamshell_base">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_ankle_clamshell_cap.STL" />
+      </geometry>
+      <material name="mat_right_ankle_clamshell_cap">
+        <color rgba="0.92 0.92 0.94 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_foot.STL" />
+      </geometry>
+      <material name="mat_right_foot">
+        <color rgba="0.9 0.9 0.92 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.000262 -0.000796 -0.012623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.049994 0.047835 0.053138" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.000177 -0.000121 -0.078368" rpy="0 0 0" />
+      <geometry>
+        <box size="0.069755 0.078654 0.008000" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_left_hip_yaw" type="revolute">
+    <parent link="torso_base" />
+    <child link="left_hip_yaw_link" />
+    <origin xyz="0.010474 0.069181 -0.081368" rpy="0 0 0" />
+    <axis xyz="0.044866 0.353481 0.934365" />
+    <limit lower="-0.7854" upper="0.7854" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_left_hip_roll" type="revolute">
+    <parent link="left_hip_yaw_link" />
+    <child link="left_hip_roll_link" />
+    <origin xyz="0.007065 0.056931 -0.020512" rpy="0 0 0" />
+    <axis xyz="0.992990 -0.118157 -0.002981" />
+    <limit lower="-0.7854" upper="0.7854" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_left_hip_pitch" type="revolute">
+    <parent link="left_hip_roll_link" />
+    <child link="left_thigh_link" />
+    <origin xyz="-0.000068 0.000537 -0.043977" rpy="0 0 0" />
+    <axis xyz="0.118185 0.992920 0.011937" />
+    <limit lower="-1.5708" upper="1.5708" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_left_knee_pitch" type="revolute">
+    <parent link="left_thigh_link" />
+    <child link="left_shin_link" />
+    <origin xyz="-0.000236 0.000876 -0.166912" rpy="0 0 0" />
+    <axis xyz="0.118185 0.992920 0.011937" />
+    <limit lower="-2.0944" upper="2.0944" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_left_ankle_pitch" type="revolute">
+    <parent link="left_shin_link" />
+    <child link="left_foot_link" />
+    <origin xyz="-0.000460 0.000182 -0.106915" rpy="0 0 0" />
+    <axis xyz="0.118185 0.992920 0.011937" />
+    <limit lower="-1.2217" upper="1.2217" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_right_hip_yaw" type="revolute">
+    <parent link="torso_base" />
+    <child link="right_hip_yaw_link" />
+    <origin xyz="0.010156 -0.068959 -0.082050" rpy="0 0 0" />
+    <axis xyz="0.044866 -0.353481 0.934365" />
+    <limit lower="-0.7854" upper="0.7854" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_right_hip_roll" type="revolute">
+    <parent link="right_hip_yaw_link" />
+    <child link="right_hip_roll_link" />
+    <origin xyz="0.007456 -0.055964 -0.022895" rpy="0 0 0" />
+    <axis xyz="-0.992041 -0.125916 -0.000000" />
+    <limit lower="-0.7854" upper="0.7854" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_right_hip_pitch" type="revolute">
+    <parent link="right_hip_roll_link" />
+    <child link="right_thigh_link" />
+    <origin xyz="-0.000068 0.000537 -0.043977" rpy="0 0 0" />
+    <axis xyz="-0.125906 0.991966 0.012304" />
+    <limit lower="-1.5708" upper="1.5708" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_right_knee_pitch" type="revolute">
+    <parent link="right_thigh_link" />
+    <child link="right_shin_link" />
+    <origin xyz="-0.000562 0.003158 -0.166883" rpy="0 0 0" />
+    <axis xyz="-0.125906 0.991966 0.012304" />
+    <limit lower="-2.0944" upper="2.0944" effort="3.0" velocity="6.0" />
+  </joint>
+  <joint name="joint_right_ankle_pitch" type="revolute">
+    <parent link="right_shin_link" />
+    <child link="right_foot_link" />
+    <origin xyz="-0.000469 0.002426 -0.106888" rpy="0 0 0" />
+    <axis xyz="-0.125906 0.991966 0.012304" />
+    <limit lower="-1.2217" upper="1.2217" effort="3.0" velocity="6.0" />
+  </joint>
+  <link name="imu_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001000" />
+      <inertia ixx="1.0e-07" ixy="0" ixz="0" iyy="1.0e-07" iyz="0" izz="1.0e-07" />
+    </inertial>
+  </link>
+  <joint name="joint_imu_fixed" type="fixed">
+    <parent link="torso_base" />
+    <child link="imu_link" />
+    <origin xyz="0.024481 -0.003828 0.004667" rpy="0.000000 0.000000 0.000000" />
+  </joint>
+  <link name="left_stereo_camera_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001000" />
+      <inertia ixx="1.0e-07" ixy="0" ixz="0" iyy="1.0e-07" iyz="0" izz="1.0e-07" />
+    </inertial>
+  </link>
+  <joint name="joint_left_stereo_cam_fixed" type="fixed">
+    <parent link="torso_base" />
+    <child link="left_stereo_camera_link" />
+    <origin xyz="0.046881 0.040000 0.002469" rpy="-0.000000 -0.000000 -0.000000" />
+  </joint>
+  <link name="right_stereo_camera_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001000" />
+      <inertia ixx="1.0e-07" ixy="0" ixz="0" iyy="1.0e-07" iyz="0" izz="1.0e-07" />
+    </inertial>
+  </link>
+  <joint name="joint_right_stereo_cam_fixed" type="fixed">
+    <parent link="torso_base" />
+    <child link="right_stereo_camera_link" />
+    <origin xyz="0.046881 -0.040000 0.002469" rpy="-0.000000 -0.000000 -0.000000" />
+  </joint>
+  <link name="top_camera_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001000" />
+      <inertia ixx="1.0e-07" ixy="0" ixz="0" iyy="1.0e-07" iyz="0" izz="1.0e-07" />
+    </inertial>
+  </link>
+  <joint name="joint_top_head_cam_fixed" type="fixed">
+    <parent link="torso_base" />
+    <child link="top_camera_link" />
+    <origin xyz="0.036075 0.000440 0.105871" rpy="-0.000000 -0.148890 0.000000" />
+  </joint>
+  <link name="left_foot_contact_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001000" />
+      <inertia ixx="1.0e-07" ixy="0" ixz="0" iyy="1.0e-07" iyz="0" izz="1.0e-07" />
+    </inertial>
+  </link>
+  <joint name="joint_left_foot_contact_fixed" type="fixed">
+    <parent link="left_foot_link" />
+    <child link="left_foot_contact_link" />
+    <origin xyz="-0.000422 -0.000123 -0.078445" rpy="0.000000 0.000000 0.000000" />
+  </joint>
+  <link name="right_foot_contact_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001000" />
+      <inertia ixx="1.0e-07" ixy="0" ixz="0" iyy="1.0e-07" iyz="0" izz="1.0e-07" />
+    </inertial>
+  </link>
+  <joint name="joint_right_foot_contact_fixed" type="fixed">
+    <parent link="right_foot_link" />
+    <child link="right_foot_contact_link" />
+    <origin xyz="0.000177 -0.000121 -0.078368" rpy="0.000000 0.000000 0.000000" />
+  </joint>
+  <gazebo reference="imu_link">
+    <sensor name="bno085_imu" type="imu">
+      <always_on>true</always_on>
+      <update_rate>200</update_rate>
+    </sensor>
+    <sensor name="bno085_magnetometer" type="magnetometer">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+    </sensor>
+  </gazebo>
+  <gazebo reference="left_stereo_camera_link">
+    <sensor name="left_stereo_cam" type="camera">
+      <update_rate>30</update_rate>
+      <camera name="left_stereo_cam">
+        <horizontal_fov>1.0856</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+        </image>
+      </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="right_stereo_camera_link">
+    <sensor name="right_stereo_cam" type="camera">
+      <update_rate>30</update_rate>
+      <camera name="right_stereo_cam">
+        <horizontal_fov>1.0856</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+        </image>
+      </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="top_camera_link">
+    <sensor name="top_head_cam" type="camera">
+      <update_rate>30</update_rate>
+      <camera name="top_head_cam">
+        <horizontal_fov>1.0856</horizontal_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+        </image>
+      </camera>
+    </sensor>
+  </gazebo>
+  <gazebo reference="left_foot_link">
+    <sensor name="left_foot_contact" type="contact">
+      <always_on>true</always_on>
+      <update_rate>500</update_rate>
+    </sensor>
+  </gazebo>
+  <gazebo reference="right_foot_link">
+    <sensor name="right_foot_contact" type="contact">
+      <always_on>true</always_on>
+      <update_rate>500</update_rate>
+    </sensor>
+  </gazebo>
+</robot>
